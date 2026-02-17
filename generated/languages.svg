@@ -14,7 +14,7 @@
       
         @keyframes slide-right-0 {
           from { width: 0; }
-          to { width: 654.02px; }
+          to { width: 654.16px; }
         }
         .bar-0 {
           animation: slide-right-0 1s cubic-bezier(0.2, 0, 0.2, 1) 0.2s forwards;
@@ -26,7 +26,7 @@
       
         @keyframes slide-right-1 {
           from { width: 0; }
-          to { width: 30.04px; }
+          to { width: 30.06px; }
         }
         .bar-1 {
           animation: slide-right-1 1s cubic-bezier(0.2, 0, 0.2, 1) 0.30000000000000004s forwards;
@@ -38,7 +38,7 @@
       
         @keyframes slide-right-2 {
           from { width: 0; }
-          to { width: 19.36px; }
+          to { width: 19.18px; }
         }
         .bar-2 {
           animation: slide-right-2 1s cubic-bezier(0.2, 0, 0.2, 1) 0.4s forwards;
@@ -207,7 +207,7 @@
           <text x="100" y="0" class="lang-lines fade-0">16k lines</text>
           
           <!-- Right: Percentage -->
-          <text x="720" y="0" text-anchor="end" class="lang-percent fade-0">90.8%</text>
+          <text x="720" y="0" text-anchor="end" class="lang-percent fade-0">90.9%</text>
 
           <!-- Row 2: Progress Bar -->
           <!-- Track (Background) -->
@@ -240,7 +240,7 @@
           <!-- Row 1: Text Labels (Above Bar) -->
           <!-- Left: Language Name + Lines -->
           <text x="0" y="0" class="lang-name fade-2">HTML</text>
-          <text x="46" y="0" class="lang-lines fade-2">463 lines</text>
+          <text x="46" y="0" class="lang-lines fade-2">459 lines</text>
           
           <!-- Right: Percentage -->
           <text x="720" y="0" text-anchor="end" class="lang-percent fade-2">2.7%</text>
@@ -251,7 +251,7 @@
           
           <!-- Filled Bar -->
           <rect x="0" y="12" width="0" height="12" rx="6" fill="#e34c26" class="bar-2">
-             <title>HTML: 463 lines</title>
+             <title>HTML: 459 lines</title>
           </rect>
         </g>
         <g transform="translate(40, 236)">
