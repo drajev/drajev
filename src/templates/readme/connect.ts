@@ -42,11 +42,10 @@ const socialLinks: SocialLink[] = [
 export function generateConnect(): string {
   const links = socialLinks
     .map(
-      link => `  <a href="${link.url}" target="_blank">
-    <img align="center" src="${link.icon}" alt="${link.name.toLowerCase()}" height="${link.height}" ${link.name === 'LinkedIn' || link.name === 'Twitter' || link.name === 'YouTube' ? 'width="40"' : ''} />
-  </a>`,
+      link =>
+        `<a href="${link.url}" target="_blank"><img align="center" src="${link.icon}" alt="${link.name.toLowerCase()}" height="${link.height}" ${link.name === 'LinkedIn' || link.name === 'Twitter' || link.name === 'YouTube' ? 'width="40"' : ''} /></a>`,
     )
-    .join('\n');
+    .join(' ');
 
   return `<h3 align="left">📬 Connect with Me:</h3>
 <p align="left">

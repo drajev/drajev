@@ -24,8 +24,8 @@ export class StatsOverviewGenerator extends SVGGenerator {
   };
 
   constructor(stats: GitHubStats) {
-    // Fixed: Increased height from 450 to 500 to fit the footer
-    super(800, 500);
+    // Height fits: hero + full-width activity heatmap + stat boxes
+    super(800, 840);
     this.#stats = stats;
   }
 
@@ -33,39 +33,39 @@ export class StatsOverviewGenerator extends SVGGenerator {
     // 1. Top Section: Hero Stats
     const heroSection = this.#generateHeroSection();
 
-    // 2. Middle Section: The Grid
-    const gridSection = this.#generateGridSection();
+    // 2. Activity heatmap (above the stat boxes)
+    const activitySection = this.#generateActivitySection();
 
-    // 3. Bottom Section: Heatmap & Footer
-    const bottomSection = this.#generateBottomSection();
+    // 3. Stat boxes grid (Commits, PRs, etc.)
+    const gridSection = this.#generateGridSection();
 
     const styles = `
       .header { font: 600 22px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${this.theme.text}; }
       .subheader { font: 400 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${this.theme.textSecondary}; }
-      
+
       /* Card Styles */
-      .card-bg { fill: ${this.theme.border}; opacity: 0.15; } 
+      .card-bg { fill: ${this.theme.border}; opacity: 0.15; }
       .card-label { font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${this.theme.textSecondary}; text-transform: uppercase; letter-spacing: 0.5px; }
       .card-value { font: 600 20px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${this.theme.text}; }
       .card-sub { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${this.theme.textSecondary}; }
-      
+
       /* Hero Styles */
       .hero-val { font: 700 32px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${this.theme.accent}; }
       .hero-lbl { font: 400 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${this.theme.textSecondary}; }
-      
-      /* Heatmap Styles */
-      .heatmap-lbl { font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${this.theme.text}; }
-      
+
+      /* Heatmap / Activity section */
+      .heatmap-lbl { font: 600 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${this.theme.text}; }
+
       /* Animations */
       /* Fixed: Removed 'opacity: 0' default to prevent invisible elements if animation fails */
-      .slide-content { 
-        animation: slideUp 0.6s cubic-bezier(0.2, 0, 0.2, 1) forwards; 
+      .slide-content {
+        animation: slideUp 0.6s cubic-bezier(0.2, 0, 0.2, 1) forwards;
         transform-origin: center;
       }
-      
-      @keyframes slideUp { 
+
+      @keyframes slideUp {
         from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); } 
+        to { opacity: 1; transform: translateY(0); }
       }
     `;
 
@@ -76,7 +76,7 @@ export class StatsOverviewGenerator extends SVGGenerator {
           <stop offset="100%" stop-color="#f59e0b" />
         </linearGradient>
       </defs>
-      
+
       <!-- Fixed: Removed animation class from header to ensure visibility -->
       <g>
         ${this.createHeader('📊 GitHub Overview')}
@@ -86,8 +86,8 @@ export class StatsOverviewGenerator extends SVGGenerator {
       </g>
 
       ${heroSection}
+      ${activitySection}
       ${gridSection}
-      ${bottomSection}
     `;
 
     return this.createSVGWrapper(content, styles);
@@ -102,10 +102,10 @@ export class StatsOverviewGenerator extends SVGGenerator {
             <text x="0" y="0" class="hero-lbl">Total Contributions</text>
             <text x="0" y="35" class="hero-val">${this.#stats.streak.totalContributions.toLocaleString()}</text>
           </g>
-          
+
           <!-- Vertical Divider -->
           <line x1="220" y1="0" x2="220" y2="45" stroke="${this.theme.border}" stroke-width="1" opacity="0.3"/>
-          
+
           <!-- Current Streak -->
           <g transform="translate(260, 0)">
             <text x="0" y="0" class="hero-lbl">Current Streak</text>
@@ -183,7 +183,7 @@ export class StatsOverviewGenerator extends SVGGenerator {
     const gapX = 20;
     const gapY = 20;
     const startX = 40;
-    const startY = 150;
+    const startY = 640;
 
     stats.forEach((stat, i) => {
       const row = Math.floor(i / 4);
@@ -197,12 +197,12 @@ export class StatsOverviewGenerator extends SVGGenerator {
           <g class="slide-content" style="animation-delay: ${0.2 + i * 0.05}s">
             <!-- Card Background -->
             <rect width="${cardW}" height="${cardH}" rx="8" class="card-bg" />
-            
+
             <!-- Icon (Top Right) -->
             <g transform="translate(${cardW - 28}, 12) scale(1.2)">
                <path d="${stat.icon}" fill="${stat.color}" opacity="0.8"/>
             </g>
-            
+
             <!-- Value & Label -->
             <g transform="translate(16, 28)">
               <text y="0" class="card-label" fill="${stat.color}">${stat.label}</text>
@@ -217,49 +217,65 @@ export class StatsOverviewGenerator extends SVGGenerator {
     return gridSVG;
   }
 
-  #generateBottomSection(): string {
+  #generateActivitySection(): string {
     const last12Weeks = this.#stats.contributionGraph.slice(-84);
     const weeks: ContributionDay[][] = [];
     for (let i = 0; i < last12Weeks.length; i += 7) {
       weeks.push(last12Weeks.slice(i, i + 7));
     }
 
-    const cellSize = 11;
-    const cellGap = 3;
-    const startY = 365;
-    const startX = 40;
+    // Full-width heatmap: use almost entire card width (small side margins)
+    const marginX = 24;
+    const heatmapAvailableWidth = 800 - 2 * marginX; // 752px
+    const numWeeks = 12;
+    const numDays = 7;
+    const cellGap = 2;
+    const cellSize = Math.floor(
+      (heatmapAvailableWidth + cellGap) / numWeeks - cellGap,
+    ); // ~60px cells
+    const heatmapWidth = numWeeks * (cellSize + cellGap) - cellGap;
+    const heatmapHeight = numDays * (cellSize + cellGap) - cellGap;
+
+    const sectionTop = 135;
+    const labelHeight = 32;
+    const heatmapStartX = marginX + (heatmapAvailableWidth - heatmapWidth) / 2; // center in card
+    const heatmapStartY = sectionTop + labelHeight;
 
     let heatmapSVG = '';
     weeks.forEach((week, wI) => {
       week.forEach((day, dI) => {
-        const x = startX + wI * (cellSize + cellGap);
-        const y = startY + dI * (cellSize + cellGap) + 20;
+        const x = heatmapStartX + wI * (cellSize + cellGap);
+        const y = heatmapStartY + dI * (cellSize + cellGap);
         const color =
           this.theme.contribution[
             `level${day.level}` as keyof typeof this.theme.contribution
           ];
-        heatmapSVG += `<rect x="${x}" y="${y}" width="${cellSize}" height="${cellSize}" rx="2" fill="${color}" opacity="0.9" />`;
+        heatmapSVG += `<rect x="${x}" y="${y}" width="${cellSize}" height="${cellSize}" rx="3" fill="${color}" opacity="0.95" />`;
       });
     });
 
+    const sectionHeight = labelHeight + heatmapHeight + 24;
+    const miniStatsY = sectionTop + labelHeight + heatmapHeight + 16;
+
     return `
-      <g class="slide-content" style="animation-delay: 0.6s">
-        <!-- Large Footer Card Background -->
-        <rect x="40" y="350" width="740" height="120" rx="8" class="card-bg" />
-        
-        <!-- Heatmap Container -->
+      <g class="slide-content" style="animation-delay: 0.15s">
+        <!-- Full-width activity card -->
+        <rect x="0" y="${sectionTop}" width="800" height="${sectionHeight}" class="card-bg" />
+
+        <!-- Heatmap label -->
+        <text x="${marginX}" y="${sectionTop + 22}" class="heatmap-lbl">Recent Activity (12 Weeks)</text>
+
+        <!-- Heatmap (centered, full-width) -->
         <g>
-          <text x="55" y="375" class="heatmap-lbl">Recent Activity (12 Weeks)</text>
           ${heatmapSVG}
         </g>
 
-        <!-- Mini Stats Right Side -->
-        <g transform="translate(550, 380)">
-           <text x="0" y="0" class="card-label">Average</text>
-           <text x="0" y="25" class="card-value">${this.#stats.avgCommitsPerDay} / day</text>
-           
-           <text x="0" y="60" class="card-label">Contributed To</text>
-           <text x="0" y="85" class="card-value">${this.#stats.contributedTo} Repos</text>
+        <!-- Mini stats below heatmap -->
+        <g transform="translate(${marginX}, ${miniStatsY})">
+          <text x="0" y="0" class="card-label">Average</text>
+          <text x="0" y="22" class="card-value">${this.#stats.avgCommitsPerDay} / day</text>
+          <text x="200" y="0" class="card-label">Contributed To</text>
+          <text x="200" y="22" class="card-value">${this.#stats.contributedTo} Repos</text>
         </g>
       </g>
     `;
