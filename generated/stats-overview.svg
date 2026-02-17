@@ -135,7 +135,7 @@
           <!-- Total Contributions -->
           <g>
             <text x="0" y="0" class="hero-lbl">Total Contributions</text>
-            <text x="0" y="35" class="hero-val">83</text>
+            <text x="0" y="35" class="hero-val">149</text>
           </g>
           
           <!-- Vertical Divider -->
@@ -164,8 +164,8 @@
             <!-- Value & Label -->
             <g transform="translate(16, 28)">
               <text y="0" class="card-label" fill="#3b82f6">Commits</text>
-              <text y="24" class="card-value">62</text>
-              <text y="38" class="card-sub" opacity="0.7">81%</text>
+              <text y="24" class="card-value">111</text>
+              <text y="38" class="card-sub" opacity="0.7">79.86%</text>
             </g>
           </g>
         </g>
@@ -183,8 +183,8 @@
             <!-- Value & Label -->
             <g transform="translate(16, 28)">
               <text y="0" class="card-label" fill="#10b981">Pull Requests</text>
-              <text y="24" class="card-value">15</text>
-              <text y="38" class="card-sub" opacity="0.7">19%</text>
+              <text y="24" class="card-value">28</text>
+              <text y="38" class="card-sub" opacity="0.7">20.14%</text>
             </g>
           </g>
         </g>
@@ -240,7 +240,7 @@
             <!-- Value & Label -->
             <g transform="translate(16, 28)">
               <text y="0" class="card-label" fill="#ec4899">Repositories</text>
-              <text y="24" class="card-value">5</text>
+              <text y="24" class="card-value">8</text>
               <text y="38" class="card-sub" opacity="0.7">Contributed</text>
             </g>
           </g>
@@ -317,10 +317,10 @@
         <!-- Mini Stats Right Side -->
         <g transform="translate(550, 380)">
            <text x="0" y="0" class="card-label">Average</text>
-           <text x="0" y="25" class="card-value">0.2 / day</text>
+           <text x="0" y="25" class="card-value">9.25 / day</text>
            
            <text x="0" y="60" class="card-label">Contributed To</text>
-           <text x="0" y="85" class="card-value">5 Repos</text>
+           <text x="0" y="85" class="card-value">8 Repos</text>
         </g>
       </g>
     
