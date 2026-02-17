@@ -135,7 +135,7 @@
           <!-- Total Contributions -->
           <g>
             <text x="0" y="0" class="hero-lbl">Total Contributions</text>
-            <text x="0" y="35" class="hero-val">2</text>
+            <text x="0" y="35" class="hero-val">984</text>
           </g>
           
           <!-- Vertical Divider -->
@@ -144,8 +144,8 @@
           <!-- Current Streak -->
           <g transform="translate(260, 0)">
             <text x="0" y="0" class="hero-lbl">Current Streak</text>
-            <text x="0" y="35" class="hero-val" fill="url(#grad-streak)">0 days</text>
-            <text x="140" y="35" class="card-sub" dy="-5">Best: 1</text>
+            <text x="0" y="35" class="hero-val" fill="url(#grad-streak)">2 days</text>
+            <text x="140" y="35" class="card-sub" dy="-5">Best: 10</text>
           </g>
         </g>
       </g>
@@ -164,8 +164,8 @@
             <!-- Value & Label -->
             <g transform="translate(16, 28)">
               <text y="0" class="card-label" fill="#3b82f6">Commits</text>
-              <text y="24" class="card-value">0</text>
-              <text y="38" class="card-sub" opacity="0.7">0%</text>
+              <text y="24" class="card-value">548</text>
+              <text y="38" class="card-sub" opacity="0.7">55.69%</text>
             </g>
           </g>
         </g>
@@ -183,8 +183,8 @@
             <!-- Value & Label -->
             <g transform="translate(16, 28)">
               <text y="0" class="card-label" fill="#10b981">Pull Requests</text>
-              <text y="24" class="card-value">0</text>
-              <text y="38" class="card-sub" opacity="0.7">0%</text>
+              <text y="24" class="card-value">232</text>
+              <text y="38" class="card-sub" opacity="0.7">23.58%</text>
             </g>
           </g>
         </g>
@@ -202,8 +202,8 @@
             <!-- Value & Label -->
             <g transform="translate(16, 28)">
               <text y="0" class="card-label" fill="#8b5cf6">Code Reviews</text>
-              <text y="24" class="card-value">0</text>
-              <text y="38" class="card-sub" opacity="0.7">0%</text>
+              <text y="24" class="card-value">204</text>
+              <text y="38" class="card-sub" opacity="0.7">20.73%</text>
             </g>
           </g>
         </g>
@@ -221,8 +221,8 @@
             <!-- Value & Label -->
             <g transform="translate(16, 28)">
               <text y="0" class="card-label" fill="#f59e0b">Issues</text>
-              <text y="24" class="card-value">2</text>
-              <text y="38" class="card-sub" opacity="0.7">100%</text>
+              <text y="24" class="card-value">0</text>
+              <text y="38" class="card-sub" opacity="0.7">0%</text>
             </g>
           </g>
         </g>
@@ -240,7 +240,7 @@
             <!-- Value & Label -->
             <g transform="translate(16, 28)">
               <text y="0" class="card-label" fill="#ec4899">Repositories</text>
-              <text y="24" class="card-value">1</text>
+              <text y="24" class="card-value">5</text>
               <text y="38" class="card-sub" opacity="0.7">Contributed</text>
             </g>
           </g>
@@ -311,16 +311,16 @@
         <!-- Heatmap Container -->
         <g>
           <text x="55" y="375" class="heatmap-lbl">Recent Activity (12 Weeks)</text>
-          <rect x="40" y="385" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="40" y="399" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="40" y="413" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="40" y="427" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="40" y="441" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="40" y="455" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="40" y="469" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="54" y="385" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="54" y="399" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="54" y="413" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="54" y="427" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="54" y="441" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="54" y="455" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="54" y="469" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="68" y="385" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="68" y="399" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="68" y="413" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="68" y="427" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="68" y="441" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="68" y="455" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="68" y="469" width="11" height="11" rx="2" fill="#0e4429" opacity="0.9" /><rect x="82" y="385" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="82" y="399" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="82" y="413" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="82" y="427" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="82" y="441" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="82" y="455" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="82" y="469" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="96" y="385" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="96" y="399" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="96" y="413" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="96" y="427" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="96" y="441" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="96" y="455" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="96" y="469" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="110" y="385" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="110" y="399" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="110" y="413" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="110" y="427" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="110" y="441" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="110" y="455" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="110" y="469" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="124" y="385" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="124" y="399" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="124" y="413" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="124" y="427" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="124" y="441" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="124" y="455" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="124" y="469" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="138" y="385" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="138" y="399" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="138" y="413" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="138" y="427" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="138" y="441" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="138" y="455" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="138" y="469" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="152" y="385" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="152" y="399" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="152" y="413" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="152" y="427" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="152" y="441" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="152" y="455" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="152" y="469" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="166" y="385" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="166" y="399" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="166" y="413" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="166" y="427" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="166" y="441" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="166" y="455" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="166" y="469" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="180" y="385" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="180" y="399" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="180" y="413" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="180" y="427" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="180" y="441" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="180" y="455" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="180" y="469" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="194" y="385" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="194" y="399" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="194" y="413" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="194" y="427" width="11" height="11" rx="2" fill="#0e4429" opacity="0.9" /><rect x="194" y="441" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="194" y="455" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="194" y="469" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" />
+          <rect x="40" y="385" width="11" height="11" rx="2" fill="#39d353" opacity="0.9" /><rect x="40" y="399" width="11" height="11" rx="2" fill="#006d32" opacity="0.9" /><rect x="40" y="413" width="11" height="11" rx="2" fill="#39d353" opacity="0.9" /><rect x="40" y="427" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="40" y="441" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="40" y="455" width="11" height="11" rx="2" fill="#0e4429" opacity="0.9" /><rect x="40" y="469" width="11" height="11" rx="2" fill="#0e4429" opacity="0.9" /><rect x="54" y="385" width="11" height="11" rx="2" fill="#006d32" opacity="0.9" /><rect x="54" y="399" width="11" height="11" rx="2" fill="#39d353" opacity="0.9" /><rect x="54" y="413" width="11" height="11" rx="2" fill="#006d32" opacity="0.9" /><rect x="54" y="427" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="54" y="441" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="54" y="455" width="11" height="11" rx="2" fill="#0e4429" opacity="0.9" /><rect x="54" y="469" width="11" height="11" rx="2" fill="#0e4429" opacity="0.9" /><rect x="68" y="385" width="11" height="11" rx="2" fill="#006d32" opacity="0.9" /><rect x="68" y="399" width="11" height="11" rx="2" fill="#006d32" opacity="0.9" /><rect x="68" y="413" width="11" height="11" rx="2" fill="#006d32" opacity="0.9" /><rect x="68" y="427" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="68" y="441" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="68" y="455" width="11" height="11" rx="2" fill="#0e4429" opacity="0.9" /><rect x="68" y="469" width="11" height="11" rx="2" fill="#006d32" opacity="0.9" /><rect x="82" y="385" width="11" height="11" rx="2" fill="#0e4429" opacity="0.9" /><rect x="82" y="399" width="11" height="11" rx="2" fill="#26a641" opacity="0.9" /><rect x="82" y="413" width="11" height="11" rx="2" fill="#26a641" opacity="0.9" /><rect x="82" y="427" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="82" y="441" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="82" y="455" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="82" y="469" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="96" y="385" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="96" y="399" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="96" y="413" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="96" y="427" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="96" y="441" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="96" y="455" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="96" y="469" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="110" y="385" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="110" y="399" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="110" y="413" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="110" y="427" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="110" y="441" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="110" y="455" width="11" height="11" rx="2" fill="#006d32" opacity="0.9" /><rect x="110" y="469" width="11" height="11" rx="2" fill="#006d32" opacity="0.9" /><rect x="124" y="385" width="11" height="11" rx="2" fill="#26a641" opacity="0.9" /><rect x="124" y="399" width="11" height="11" rx="2" fill="#006d32" opacity="0.9" /><rect x="124" y="413" width="11" height="11" rx="2" fill="#39d353" opacity="0.9" /><rect x="124" y="427" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="124" y="441" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="124" y="455" width="11" height="11" rx="2" fill="#0e4429" opacity="0.9" /><rect x="124" y="469" width="11" height="11" rx="2" fill="#006d32" opacity="0.9" /><rect x="138" y="385" width="11" height="11" rx="2" fill="#006d32" opacity="0.9" /><rect x="138" y="399" width="11" height="11" rx="2" fill="#006d32" opacity="0.9" /><rect x="138" y="413" width="11" height="11" rx="2" fill="#006d32" opacity="0.9" /><rect x="138" y="427" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="138" y="441" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="138" y="455" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="138" y="469" width="11" height="11" rx="2" fill="#006d32" opacity="0.9" /><rect x="152" y="385" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="152" y="399" width="11" height="11" rx="2" fill="#0e4429" opacity="0.9" /><rect x="152" y="413" width="11" height="11" rx="2" fill="#39d353" opacity="0.9" /><rect x="152" y="427" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="152" y="441" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="152" y="455" width="11" height="11" rx="2" fill="#006d32" opacity="0.9" /><rect x="152" y="469" width="11" height="11" rx="2" fill="#006d32" opacity="0.9" /><rect x="166" y="385" width="11" height="11" rx="2" fill="#26a641" opacity="0.9" /><rect x="166" y="399" width="11" height="11" rx="2" fill="#26a641" opacity="0.9" /><rect x="166" y="413" width="11" height="11" rx="2" fill="#006d32" opacity="0.9" /><rect x="166" y="427" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="166" y="441" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="166" y="455" width="11" height="11" rx="2" fill="#006d32" opacity="0.9" /><rect x="166" y="469" width="11" height="11" rx="2" fill="#006d32" opacity="0.9" /><rect x="180" y="385" width="11" height="11" rx="2" fill="#006d32" opacity="0.9" /><rect x="180" y="399" width="11" height="11" rx="2" fill="#0e4429" opacity="0.9" /><rect x="180" y="413" width="11" height="11" rx="2" fill="#26a641" opacity="0.9" /><rect x="180" y="427" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="180" y="441" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="180" y="455" width="11" height="11" rx="2" fill="#006d32" opacity="0.9" /><rect x="180" y="469" width="11" height="11" rx="2" fill="#0e4429" opacity="0.9" /><rect x="194" y="385" width="11" height="11" rx="2" fill="#006d32" opacity="0.9" /><rect x="194" y="399" width="11" height="11" rx="2" fill="#006d32" opacity="0.9" /><rect x="194" y="413" width="11" height="11" rx="2" fill="#006d32" opacity="0.9" /><rect x="194" y="427" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="194" y="441" width="11" height="11" rx="2" fill="#161b22" opacity="0.9" /><rect x="194" y="455" width="11" height="11" rx="2" fill="#39d353" opacity="0.9" /><rect x="194" y="469" width="11" height="11" rx="2" fill="#0e4429" opacity="0.9" />
         </g>
 
         <!-- Mini Stats Right Side -->
         <g transform="translate(550, 380)">
            <text x="0" y="0" class="card-label">Average</text>
-           <text x="0" y="25" class="card-value">0 / day</text>
+           <text x="0" y="25" class="card-value">3.01 / day</text>
            
            <text x="0" y="60" class="card-label">Contributed To</text>
-           <text x="0" y="85" class="card-value">0 Repos</text>
+           <text x="0" y="85" class="card-value">7 Repos</text>
         </g>
       </g>
     
