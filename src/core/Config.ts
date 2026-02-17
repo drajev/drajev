@@ -8,15 +8,15 @@ import { ConfigError } from '../errors/errors.js';
  */
 export class Config {
   static #instance: Config;
-  #githubToken: string;
+  #githubTokens: string;
   #githubUsername: string;
   #generatedDir: string;
   #readmePath: string;
   #indexPath: string;
 
   private constructor() {
-    this.#githubToken = process.env.GITHUB_TOKEN || '';
-    this.#githubUsername = process.env.GITHUB_USERNAME || DEFAULTS.USERNAME;
+    this.#githubTokens = process.env.GH_STATS_TOKENS || '';
+    this.#githubUsername = process.env.GH_USERNAME || DEFAULTS.USERNAME;
     this.#generatedDir = PATHS.GENERATED_DIR;
     this.#readmePath = PATHS.README;
     this.#indexPath = PATHS.INDEX_HTML;
@@ -29,8 +29,8 @@ export class Config {
     return Config.#instance;
   }
 
-  get githubToken(): string {
-    return this.#githubToken;
+  get githubTokens(): string[] {
+    return this.#githubTokens.split(',');
   }
 
   get githubUsername(): string {
@@ -50,7 +50,7 @@ export class Config {
   }
 
   validate(): void {
-    if (!this.#githubToken) {
+    if (!this.#githubTokens) {
       throw new ConfigError(ERROR_MESSAGES.NO_TOKEN, {
         username: this.#githubUsername,
       });
