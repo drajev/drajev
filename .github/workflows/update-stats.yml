@@ -56,8 +56,8 @@ jobs:
 
       - name: Generate stats
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_STATS_TOKEN }}
-          GITHUB_USERNAME: petarzarkov
+          GH_STATS_TOKENS: ${{ secrets.GH_STATS_TOKENS }}
+          GH_USERNAME: ${{ secrets.GH_USERNAME }}
         run: pnpm generate
 
       - name: Commit and push if changed
