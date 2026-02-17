@@ -25,7 +25,7 @@ export class StatsOverviewGenerator extends SVGGenerator {
 
   constructor(stats: GitHubStats) {
     // Height fits: hero + full-width activity heatmap + stat boxes
-    super(800, 840);
+    super(800, 860);
     this.#stats = stats;
   }
 
@@ -53,8 +53,9 @@ export class StatsOverviewGenerator extends SVGGenerator {
       .hero-val { font: 700 32px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${this.theme.accent}; }
       .hero-lbl { font: 400 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${this.theme.textSecondary}; }
 
-      /* Heatmap / Activity section */
+      /* Heatmap / Activity section (GitHub-style) */
       .heatmap-lbl { font: 600 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${this.theme.text}; }
+      .heatmap-axis { font: 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${this.theme.textSecondary}; }
 
       /* Animations */
       /* Fixed: Removed 'opacity: 0' default to prevent invisible elements if animation fails */
@@ -183,7 +184,7 @@ export class StatsOverviewGenerator extends SVGGenerator {
     const gapX = 20;
     const gapY = 20;
     const startX = 40;
-    const startY = 640;
+    const startY = 660;
 
     stats.forEach((stat, i) => {
       const row = Math.floor(i / 4);
@@ -224,22 +225,55 @@ export class StatsOverviewGenerator extends SVGGenerator {
       weeks.push(last12Weeks.slice(i, i + 7));
     }
 
-    // Full-width heatmap: use almost entire card width (small side margins)
-    const marginX = 24;
-    const heatmapAvailableWidth = 800 - 2 * marginX; // 752px
+    // GitHub-style: small gap, square cells, space for day/month labels
+    const cellGap = 1;
     const numWeeks = 12;
     const numDays = 7;
-    const cellGap = 2;
+    const dayLabelWidth = 28;
+    const monthLabelHeight = 14;
+    const marginX = 24;
+    const heatmapContentWidth = 800 - 2 * marginX - dayLabelWidth; // space for day labels on left
     const cellSize = Math.floor(
-      (heatmapAvailableWidth + cellGap) / numWeeks - cellGap,
-    ); // ~60px cells
+      (heatmapContentWidth + cellGap) / numWeeks - cellGap,
+    );
     const heatmapWidth = numWeeks * (cellSize + cellGap) - cellGap;
     const heatmapHeight = numDays * (cellSize + cellGap) - cellGap;
 
     const sectionTop = 135;
-    const labelHeight = 32;
-    const heatmapStartX = marginX + (heatmapAvailableWidth - heatmapWidth) / 2; // center in card
-    const heatmapStartY = sectionTop + labelHeight;
+    const titleHeight = 28;
+    const heatmapStartX = marginX + dayLabelWidth;
+    const heatmapStartY = sectionTop + titleHeight;
+
+    // Day-of-week labels (GitHub order: Mon–Sun)
+    const dayLabels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+    const dayLabelsSVG = dayLabels
+      .map(
+        (label, i) =>
+          `<text x="${heatmapStartX - 6}" y="${heatmapStartY + (i + 0.5) * (cellSize + cellGap)}" class="heatmap-axis" text-anchor="end" dy="0.35em">${label}</text>`,
+      )
+      .join('\n        ');
+
+    // Month labels: show when month changes (GitHub-style)
+    const monthPositions: { weekIndex: number; label: string }[] = [];
+    let lastMonth = -1;
+    weeks.forEach((week, wI) => {
+      const m = new Date(week[0].date + 'Z').getMonth();
+      if (m !== lastMonth) {
+        monthPositions.push({
+          weekIndex: wI,
+          label: new Date(week[0].date + 'Z').toLocaleDateString('en-US', {
+            month: 'short',
+          }),
+        });
+        lastMonth = m;
+      }
+    });
+    const monthLabelsSVGFinal = monthPositions
+      .map(
+        ({ weekIndex, label }) =>
+          `<text x="${heatmapStartX + weekIndex * (cellSize + cellGap)}" y="${heatmapStartY + heatmapHeight + monthLabelHeight}" class="heatmap-axis" text-anchor="start">${label}</text>`,
+      )
+      .join('\n        ');
 
     let heatmapSVG = '';
     weeks.forEach((week, wI) => {
@@ -250,27 +284,33 @@ export class StatsOverviewGenerator extends SVGGenerator {
           this.theme.contribution[
             `level${day.level}` as keyof typeof this.theme.contribution
           ];
-        heatmapSVG += `<rect x="${x}" y="${y}" width="${cellSize}" height="${cellSize}" rx="3" fill="${color}" opacity="0.95" />`;
+        heatmapSVG += `<rect x="${x}" y="${y}" width="${cellSize}" height="${cellSize}" rx="0" fill="${color}" />`;
       });
     });
 
-    const sectionHeight = labelHeight + heatmapHeight + 24;
-    const miniStatsY = sectionTop + labelHeight + heatmapHeight + 16;
+    const sectionHeight =
+      titleHeight + heatmapHeight + monthLabelHeight + 8 + 40; // +40 for mini stats row
+    const miniStatsY =
+      sectionTop + titleHeight + heatmapHeight + monthLabelHeight + 20;
 
     return `
       <g class="slide-content" style="animation-delay: 0.15s">
-        <!-- Full-width activity card -->
+        <!-- Card background -->
         <rect x="0" y="${sectionTop}" width="800" height="${sectionHeight}" class="card-bg" />
 
-        <!-- Heatmap label -->
-        <text x="${marginX}" y="${sectionTop + 22}" class="heatmap-lbl">Recent Activity (12 Weeks)</text>
+        <!-- Title -->
+        <text x="${marginX}" y="${sectionTop + 20}" class="heatmap-lbl">Recent Activity (12 Weeks)</text>
 
-        <!-- Heatmap (centered, full-width) -->
-        <g>
-          ${heatmapSVG}
-        </g>
+        <!-- Day labels (left axis, GitHub-style) -->
+        <g>${dayLabelsSVG}</g>
 
-        <!-- Mini stats below heatmap -->
+        <!-- Month labels (bottom axis) -->
+        <g>${monthLabelsSVGFinal}</g>
+
+        <!-- Contribution grid (GitHub colors, 1px gap, square corners) -->
+        <g>${heatmapSVG}</g>
+
+        <!-- Mini stats -->
         <g transform="translate(${marginX}, ${miniStatsY})">
           <text x="0" y="0" class="card-label">Average</text>
           <text x="0" y="22" class="card-value">${this.#stats.avgCommitsPerDay} / day</text>
