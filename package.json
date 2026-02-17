@@ -1,5 +1,5 @@
 {
-  "name": "petarzarkov-profile",
+  "name": "drajev-profile",
   "version": "1.0.0",
   "description": "Automated GitHub profile stats generator",
   "type": "module",
@@ -19,7 +19,7 @@
     "stats",
     "profile"
   ],
-  "author": "Petar Zarkov",
+  "author": "Alexander Drazhev",
   "license": "MIT",
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",

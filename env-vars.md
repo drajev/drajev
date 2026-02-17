@@ -7,4 +7,4 @@ This document outlines the environment variables required for the project. These
 | Variable          | Description                            | Default Value            | Source       |
 | ----------------- | -------------------------------------- | ------------------------ | ------------ |
 | `GITHUB_TOKEN`    | GitHub Personal Access Token (Classic) | `your_github_token_here` | .env.example |
-| `GITHUB_USERNAME` | Github user                            | `petarzarkov`            | .env.example |
+| `GITHUB_USERNAME` | Github user                            | `github handle`            | .env.example |
