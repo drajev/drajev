@@ -1,0 +1,12 @@
+build
+dist
+node_modules
+coverage
+.vscode
+.idea
+.env*
+pnpm-lock.yaml
+env-vars.md
+/.github/CODEOWNERS
+*.txt
+index.html

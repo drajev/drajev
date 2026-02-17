@@ -1,0 +1,378 @@
+<svg width="800" height="578" viewBox="0 0 800 578" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    
+      .header { font: 600 22px 'Segoe UI', Ubuntu, Sans-Serif; fill: #c9d1d9; }
+      
+      /* Typography Improvements */
+      .lang-name { font: 600 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: #c9d1d9; }
+      .lang-lines { font: 400 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #8b949e; }
+      .lang-percent { font: 600 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: #c9d1d9; }
+      
+      .fade-in { animation: fadeIn 1s ease-out; }
+      @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+      
+      
+        @keyframes slide-right-0 {
+          from { width: 0; }
+          to { width: 374.20px; }
+        }
+        .bar-0 {
+          animation: slide-right-0 1s cubic-bezier(0.2, 0, 0.2, 1) 0.2s forwards;
+        }
+        .fade-0 {
+          animation: fadeIn 0.5s ease-out 0.2s forwards;
+          opacity: 0;
+        }
+      
+        @keyframes slide-right-1 {
+          from { width: 0; }
+          to { width: 98.16px; }
+        }
+        .bar-1 {
+          animation: slide-right-1 1s cubic-bezier(0.2, 0, 0.2, 1) 0.30000000000000004s forwards;
+        }
+        .fade-1 {
+          animation: fadeIn 0.5s ease-out 0.30000000000000004s forwards;
+          opacity: 0;
+        }
+      
+        @keyframes slide-right-2 {
+          from { width: 0; }
+          to { width: 67.34px; }
+        }
+        .bar-2 {
+          animation: slide-right-2 1s cubic-bezier(0.2, 0, 0.2, 1) 0.4s forwards;
+        }
+        .fade-2 {
+          animation: fadeIn 0.5s ease-out 0.4s forwards;
+          opacity: 0;
+        }
+      
+        @keyframes slide-right-3 {
+          from { width: 0; }
+          to { width: 40.20px; }
+        }
+        .bar-3 {
+          animation: slide-right-3 1s cubic-bezier(0.2, 0, 0.2, 1) 0.5s forwards;
+        }
+        .fade-3 {
+          animation: fadeIn 0.5s ease-out 0.5s forwards;
+          opacity: 0;
+        }
+      
+        @keyframes slide-right-4 {
+          from { width: 0; }
+          to { width: 32.95px; }
+        }
+        .bar-4 {
+          animation: slide-right-4 1s cubic-bezier(0.2, 0, 0.2, 1) 0.6000000000000001s forwards;
+        }
+        .fade-4 {
+          animation: fadeIn 0.5s ease-out 0.6000000000000001s forwards;
+          opacity: 0;
+        }
+      
+        @keyframes slide-right-5 {
+          from { width: 0; }
+          to { width: 32.35px; }
+        }
+        .bar-5 {
+          animation: slide-right-5 1s cubic-bezier(0.2, 0, 0.2, 1) 0.7s forwards;
+        }
+        .fade-5 {
+          animation: fadeIn 0.5s ease-out 0.7s forwards;
+          opacity: 0;
+        }
+      
+        @keyframes slide-right-6 {
+          from { width: 0; }
+          to { width: 27.20px; }
+        }
+        .bar-6 {
+          animation: slide-right-6 1s cubic-bezier(0.2, 0, 0.2, 1) 0.8s forwards;
+        }
+        .fade-6 {
+          animation: fadeIn 0.5s ease-out 0.8s forwards;
+          opacity: 0;
+        }
+      
+        @keyframes slide-right-7 {
+          from { width: 0; }
+          to { width: 15.06px; }
+        }
+        .bar-7 {
+          animation: slide-right-7 1s cubic-bezier(0.2, 0, 0.2, 1) 0.9000000000000001s forwards;
+        }
+        .fade-7 {
+          animation: fadeIn 0.5s ease-out 0.9000000000000001s forwards;
+          opacity: 0;
+        }
+      
+        @keyframes slide-right-8 {
+          from { width: 0; }
+          to { width: 32.52px; }
+        }
+        .bar-8 {
+          animation: slide-right-8 1s cubic-bezier(0.2, 0, 0.2, 1) 1s forwards;
+        }
+        .fade-8 {
+          animation: fadeIn 0.5s ease-out 1s forwards;
+          opacity: 0;
+        }
+      
+    
+    
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideInLeft {
+    from { transform: translateX(-5px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  
+  @keyframes slideInUp {
+    from { transform: translateY(5px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes growBar {
+    from { transform: scaleX(0); transform-origin: left; }
+    to { transform: scaleX(1); transform-origin: left; }
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+  
+  @keyframes popIn {
+    0% { transform: scale(0); opacity: 0; }
+    80% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  
+  .fade-in { animation: fadeIn 1.2s ease-out; }
+  .slide-in-left { animation: slideInLeft 1.2s cubic-bezier(0.4, 0, 0.2, 1); }
+  .slide-in-up { animation: slideInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1); }
+  .grow-bar { animation: growBar 2.4s cubic-bezier(0.4, 0, 0.2, 1); }
+  .pulse { animation: pulse 3s ease-in-out infinite; }
+  .pop-in { animation: popIn 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+
+  </style>
+  
+  <defs>
+    <linearGradient id="gradient-blue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="gradient-green" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="gradient-purple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+    <linearGradient id="gradient-orange" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+    <linearGradient id="gradient-red" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ef4444" />
+      <stop offset="100%" stop-color="#dc2626" />
+    </linearGradient>
+    <linearGradient id="gradient-yellow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+    <linearGradient id="gradient-pink" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ec4899" />
+      <stop offset="100%" stop-color="#db2777" />
+    </linearGradient>
+    <linearGradient id="gradient-teal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#14b8a6" />
+      <stop offset="100%" stop-color="#0d9488" />
+    </linearGradient>
+    <linearGradient id="gradient-indigo" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#4f46e5" />
+    </linearGradient>
+    <linearGradient id="gradient-grey" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6b7280" />
+      <stop offset="100%" stop-color="#4b5563" />
+    </linearGradient>
+  </defs>
+  
+  <rect x="0.5" y="0.5" width="799" height="577" rx="4.5" fill="#0d1117" stroke="#30363d"/>
+  
+  
+      <g class="fade-in">
+        <text x="25" y="35" class="header">💻 Top Languages</text>
+      </g>
+      
+        <g transform="translate(40, 80)">
+          <!-- Row 1: Text Labels (Above Bar) -->
+          <!-- Left: Language Name + Lines -->
+          <text x="0" y="0" class="lang-name fade-0">TypeScript</text>
+          <text x="100" y="0" class="lang-lines fade-0">1.4M lines</text>
+          
+          <!-- Right: Percentage -->
+          <text x="720" y="0" text-anchor="end" class="lang-percent fade-0">52.0%</text>
+
+          <!-- Row 2: Progress Bar -->
+          <!-- Track (Background) -->
+          <rect x="0" y="12" width="720" height="12" rx="6" fill="#30363d" opacity="0.2"/>
+          
+          <!-- Filled Bar -->
+          <rect x="0" y="12" width="0" height="12" rx="6" fill="#3178c6" class="bar-0">
+             <title>TypeScript: 1.4M lines</title>
+          </rect>
+        </g>
+        <g transform="translate(40, 132)">
+          <!-- Row 1: Text Labels (Above Bar) -->
+          <!-- Left: Language Name + Lines -->
+          <text x="0" y="0" class="lang-name fade-1">Zig</text>
+          <text x="37" y="0" class="lang-lines fade-1">374k lines</text>
+          
+          <!-- Right: Percentage -->
+          <text x="720" y="0" text-anchor="end" class="lang-percent fade-1">13.6%</text>
+
+          <!-- Row 2: Progress Bar -->
+          <!-- Track (Background) -->
+          <rect x="0" y="12" width="720" height="12" rx="6" fill="#30363d" opacity="0.2"/>
+          
+          <!-- Filled Bar -->
+          <rect x="0" y="12" width="0" height="12" rx="6" fill="#ec915c" class="bar-1">
+             <title>Zig: 374k lines</title>
+          </rect>
+        </g>
+        <g transform="translate(40, 184)">
+          <!-- Row 1: Text Labels (Above Bar) -->
+          <!-- Left: Language Name + Lines -->
+          <text x="0" y="0" class="lang-name fade-2">Python</text>
+          <text x="64" y="0" class="lang-lines fade-2">257k lines</text>
+          
+          <!-- Right: Percentage -->
+          <text x="720" y="0" text-anchor="end" class="lang-percent fade-2">9.4%</text>
+
+          <!-- Row 2: Progress Bar -->
+          <!-- Track (Background) -->
+          <rect x="0" y="12" width="720" height="12" rx="6" fill="#30363d" opacity="0.2"/>
+          
+          <!-- Filled Bar -->
+          <rect x="0" y="12" width="0" height="12" rx="6" fill="#3572A5" class="bar-2">
+             <title>Python: 257k lines</title>
+          </rect>
+        </g>
+        <g transform="translate(40, 236)">
+          <!-- Row 1: Text Labels (Above Bar) -->
+          <!-- Left: Language Name + Lines -->
+          <text x="0" y="0" class="lang-name fade-3">C++</text>
+          <text x="37" y="0" class="lang-lines fade-3">153k lines</text>
+          
+          <!-- Right: Percentage -->
+          <text x="720" y="0" text-anchor="end" class="lang-percent fade-3">5.6%</text>
+
+          <!-- Row 2: Progress Bar -->
+          <!-- Track (Background) -->
+          <rect x="0" y="12" width="720" height="12" rx="6" fill="#30363d" opacity="0.2"/>
+          
+          <!-- Filled Bar -->
+          <rect x="0" y="12" width="0" height="12" rx="6" fill="#f34b7d" class="bar-3">
+             <title>C++: 153k lines</title>
+          </rect>
+        </g>
+        <g transform="translate(40, 288)">
+          <!-- Row 1: Text Labels (Above Bar) -->
+          <!-- Left: Language Name + Lines -->
+          <text x="0" y="0" class="lang-name fade-4">Gherkin</text>
+          <text x="73" y="0" class="lang-lines fade-4">126k lines</text>
+          
+          <!-- Right: Percentage -->
+          <text x="720" y="0" text-anchor="end" class="lang-percent fade-4">4.6%</text>
+
+          <!-- Row 2: Progress Bar -->
+          <!-- Track (Background) -->
+          <rect x="0" y="12" width="720" height="12" rx="6" fill="#30363d" opacity="0.2"/>
+          
+          <!-- Filled Bar -->
+          <rect x="0" y="12" width="0" height="12" rx="6" fill="#5B2063" class="bar-4">
+             <title>Gherkin: 126k lines</title>
+          </rect>
+        </g>
+        <g transform="translate(40, 340)">
+          <!-- Row 1: Text Labels (Above Bar) -->
+          <!-- Left: Language Name + Lines -->
+          <text x="0" y="0" class="lang-name fade-5">JavaScript</text>
+          <text x="100" y="0" class="lang-lines fade-5">123k lines</text>
+          
+          <!-- Right: Percentage -->
+          <text x="720" y="0" text-anchor="end" class="lang-percent fade-5">4.5%</text>
+
+          <!-- Row 2: Progress Bar -->
+          <!-- Track (Background) -->
+          <rect x="0" y="12" width="720" height="12" rx="6" fill="#30363d" opacity="0.2"/>
+          
+          <!-- Filled Bar -->
+          <rect x="0" y="12" width="0" height="12" rx="6" fill="#f1e05a" class="bar-5">
+             <title>JavaScript: 123k lines</title>
+          </rect>
+        </g>
+        <g transform="translate(40, 392)">
+          <!-- Row 1: Text Labels (Above Bar) -->
+          <!-- Left: Language Name + Lines -->
+          <text x="0" y="0" class="lang-name fade-6">C#</text>
+          <text x="28" y="0" class="lang-lines fade-6">104k lines</text>
+          
+          <!-- Right: Percentage -->
+          <text x="720" y="0" text-anchor="end" class="lang-percent fade-6">3.8%</text>
+
+          <!-- Row 2: Progress Bar -->
+          <!-- Track (Background) -->
+          <rect x="0" y="12" width="720" height="12" rx="6" fill="#30363d" opacity="0.2"/>
+          
+          <!-- Filled Bar -->
+          <rect x="0" y="12" width="0" height="12" rx="6" fill="#178600" class="bar-6">
+             <title>C#: 104k lines</title>
+          </rect>
+        </g>
+        <g transform="translate(40, 444)">
+          <!-- Row 1: Text Labels (Above Bar) -->
+          <!-- Left: Language Name + Lines -->
+          <text x="0" y="0" class="lang-name fade-7">PLpgSQL</text>
+          <text x="73" y="0" class="lang-lines fade-7">57k lines</text>
+          
+          <!-- Right: Percentage -->
+          <text x="720" y="0" text-anchor="end" class="lang-percent fade-7">2.1%</text>
+
+          <!-- Row 2: Progress Bar -->
+          <!-- Track (Background) -->
+          <rect x="0" y="12" width="720" height="12" rx="6" fill="#30363d" opacity="0.2"/>
+          
+          <!-- Filled Bar -->
+          <rect x="0" y="12" width="0" height="12" rx="6" fill="#336790" class="bar-7">
+             <title>PLpgSQL: 57k lines</title>
+          </rect>
+        </g>
+        <g transform="translate(40, 496)">
+          <!-- Row 1: Text Labels (Above Bar) -->
+          <!-- Left: Language Name + Lines -->
+          <text x="0" y="0" class="lang-name fade-8">Other</text>
+          <text x="55" y="0" class="lang-lines fade-8">124k lines</text>
+          
+          <!-- Right: Percentage -->
+          <text x="720" y="0" text-anchor="end" class="lang-percent fade-8">4.5%</text>
+
+          <!-- Row 2: Progress Bar -->
+          <!-- Track (Background) -->
+          <rect x="0" y="12" width="720" height="12" rx="6" fill="#30363d" opacity="0.2"/>
+          
+          <!-- Filled Bar -->
+          <rect x="0" y="12" width="0" height="12" rx="6" fill="#64748b" class="bar-8">
+             <title>Other: 124k lines</title>
+          </rect>
+        </g>
+    
+</svg>

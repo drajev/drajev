@@ -1,0 +1,7 @@
+# Ensure SVG files are treated as images
+*.svg linguist-detectable=false
+*.svg linguist-generated=true
+
+# Treat generated files as generated
+generated/* linguist-generated=true
+
