@@ -7,7 +7,7 @@
  */
 export const DATE_RANGES = {
   /** Number of days to look back for contributions */
-  CONTRIBUTION_DAYS: 365,
+  CONTRIBUTION_DAYS: 2000,
 } as const;
 
 /**
@@ -17,7 +17,7 @@ export const DEFAULTS = {
   /** Default branch name */
   BRANCH: 'main',
   /** Default GitHub username */
-  USERNAME: 'petarzarkov',
+  USERNAME: 'AlexanderDrazhev',
 } as const;
 
 /**
