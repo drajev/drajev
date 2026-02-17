@@ -56,12 +56,15 @@ export class StatsGenerator {
     console.log(MESSAGES.FETCHING_DATA);
 
     const tokens = this.#config.githubTokens;
-    const username = this.#config.githubUsername;
+    const usernames = this.#config.githubUsername;
     const allStats: GitHubStats[] = [];
 
-    for (let i = 0; i < tokens.length; i++) {
-      console.log(`  Fetching data with token ${i + 1} of ${tokens.length}...`);
-      const client = new GitHubClient(tokens[i], username);
+    for (let i = 0; i < usernames.length; i++) {
+      const token = tokens[i % tokens.length];
+      console.log(
+        `  Fetching data for ${usernames[i]} (${i + 1} of ${usernames.length})...`,
+      );
+      const client = new GitHubClient(token, usernames[i]);
       const aggregator = new StatsAggregator(client);
       allStats.push(await aggregator.fetchAllStats());
     }
