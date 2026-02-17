@@ -30,17 +30,11 @@ export class Config {
   }
 
   get githubTokens(): string[] {
-    return this.#githubTokens
-      .split(',')
-      .map((t) => t.trim())
-      .filter(Boolean);
+    return this.#githubTokens.split(',');
   }
 
   get githubUsername(): string[] {
-    return this.#githubUsername
-      .split(',')
-      .map((username) => username.trim())
-      .filter(Boolean);
+    return this.#githubUsername.split(',').map((username) => username.trim());
   }
 
   get generatedDir(): string {
@@ -56,16 +50,10 @@ export class Config {
   }
 
   validate(): void {
-    if (this.githubTokens.length === 0) {
+    if (!this.#githubTokens) {
       throw new ConfigError(ERROR_MESSAGES.NO_TOKEN, {
         username: this.#githubUsername,
       });
-    }
-    if (this.githubUsername.length === 0) {
-      throw new ConfigError(
-        'No GitHub username(s) configured. Set GH_USERNAME in .env (e.g. user1 or user1,user2).',
-        { username: this.#githubUsername },
-      );
     }
   }
 }
