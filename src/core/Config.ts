@@ -33,8 +33,8 @@ export class Config {
     return this.#githubTokens.split(',');
   }
 
-  get githubUsername(): string[] {
-    return this.#githubUsername.split(',').map((username) => username.trim());
+  get githubUsername(): string {
+    return this.#githubUsername;
   }
 
   get generatedDir(): string {
