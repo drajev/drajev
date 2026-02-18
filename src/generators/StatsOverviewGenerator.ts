@@ -223,13 +223,13 @@ export class StatsOverviewGenerator extends SVGGenerator {
       weeks.push(last12Weeks.slice(i, i + 7));
     }
 
-    // Compact layout so it doesn't overflow narrow containers (README, mobile)
     const cellSize = 9;
     const cellGap = 2;
     const cardX = 40;
-    const cardW = 480;
+    const cardW = 740;
     const startX = 48;
     const startY = 378;
+    const labelY = 368;
 
     let heatmapSVG = '';
     weeks.forEach((week, wI) => {
@@ -254,9 +254,10 @@ export class StatsOverviewGenerator extends SVGGenerator {
           </clipPath>
         </defs>
         <g clip-path="url(#activity-clip)">
-          <rect x="${cardX}" y="350" width="${cardW}" height="120" rx="8" class="card-bg" />
+          <rect x="${cardX}" y="350" width="${cardW}" height="130" rx="8" class="card-bg" />
+          <text x="${startX}" y="${labelY}" class="heatmap-lbl">Recent Activity (12w)</text>
           <g>${heatmapSVG}</g>
-          <g transform="translate(280, 368)">
+          <g transform="translate(550, 368)">
             <text x="0" y="0" class="card-label">Average</text>
             <text x="0" y="22" class="card-value">${this.#stats.avgCommitsPerDay} / day</text>
             <text x="0" y="52" class="card-label">Contributed To</text>
