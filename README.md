@@ -49,19 +49,21 @@ Check out the auto generated github pages as well
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
   <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass" />
   <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
-  <img src="https://img.shields.io/badge/Shadcn-191970?style=for-the-badge&logo=shadcn&logoColor=white" alt="Shadcn" />
+  <img src="https://img.shields.io/badge/shadcn-000000?style=for-the-badge&logo=shadcnui&logoColor=white" alt="shadcn/ui" />
   <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
-  <img src="https://img.shields.io/badge/MUI-191970?style=for-the-badge&logo=mui&logoColor=white" alt="MUI" />
+  <img src="https://img.shields.io/badge/MUI-007FFF?style=for-the-badge&logo=mui&logoColor=white" alt="MUI" />
   <img src="https://img.shields.io/badge/Chakra_UI-319795?style=for-the-badge&logo=chakra-ui&logoColor=white" alt="Chakra UI" />
-  <img src="https://img.shields.io/badge/GSAP-0170FE?style=for-the-badge&logo=ant-design&logoColor=white" alt="GSAP" />
+  <img src="https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white" alt="GSAP" />
   <img src="https://img.shields.io/badge/Framer_Motion-000000?style=for-the-badge&logo=framer-motion&logoColor=white" alt="Framer Motion" />
+  <img src="https://img.shields.io/badge/Laravel-blade-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel Blade" />
 </p>
 
 <h4>🔧 Backend</h4>
 <p align="left">
-  <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
   <img src="https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white" alt="NestJS" />
-  <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white" alt="Express.js" />
+  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express.js" />
+  <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP" />
 </p>
 
 <h4>🗄️ Databases</h4>
@@ -85,21 +87,20 @@ Check out the auto generated github pages as well
 
 <h4>🔗 Blockchain</h4>
 <p align="left">
-  <img src="https://img.shields.io/badge/Ethereum-3C3C3C?style=for-the-badge&logo=ethereum&logoColor=white" alt="Ethereum" />
-  <img src="https://img.shields.io/badge/Hedera-8247E5?style=for-the-badge&logo=polygon&logoColor=white" alt="Hedera" />
-  <img src="https://img.shields.io/badge/Solana-4998FB?style=for-the-badge&logo=solana&logoColor=white" alt="Solana" />
-  <img src="https://img.shields.io/badge/Polkadot-4998FB?style=for-the-badge&logo=polkadot&logoColor=white" alt="Polkadot" />
+  <img src="https://img.shields.io/badge/Ethereum-627EEA?style=for-the-badge&logo=ethereum&logoColor=white" alt="Ethereum" />
+  <img src="https://img.shields.io/badge/Hedera-000000?style=for-the-badge&logo=hedera&logoColor=white" alt="Hedera" />
+  <img src="https://img.shields.io/badge/Solana-9945FF?style=for-the-badge&logo=solana&logoColor=white" alt="Solana" />
+  <img src="https://img.shields.io/badge/Polkadot-E6007A?style=for-the-badge&logo=polkadot&logoColor=white" alt="Polkadot" />
 </p>
 
 <h4>🛠️ Tools & Others</h4>
 <p align="left">
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
-
   <img src="https://img.shields.io/badge/RabbitMQ-FF6600?style=for-the-badge&logo=rabbitmq&logoColor=white" alt="RabbitMQ" />
   <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman" />
   <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" />
   <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="Bash" />
-  <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite" />
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
   <img src="https://img.shields.io/badge/Webpack-8DD6F9?style=for-the-badge&logo=webpack&logoColor=black" alt="Webpack" />
   <img src="https://img.shields.io/badge/Babel-F9DC3E?style=for-the-badge&logo=babel&logoColor=black" alt="Babel" />
   <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
