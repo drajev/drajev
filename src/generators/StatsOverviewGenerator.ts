@@ -254,7 +254,7 @@ export class StatsOverviewGenerator extends SVGGenerator {
           </clipPath>
         </defs>
         <g clip-path="url(#activity-clip)">
-          <rect x="${cardX}" y="350" width="${cardW}" height="130" rx="8" class="card-bg" />
+          <rect x="${cardX}" y="350" width="${cardW}" height="120" rx="8" class="card-bg" />
           <text x="${startX}" y="${labelY}" class="heatmap-lbl">Recent Activity (12w)</text>
           <g>${heatmapSVG}</g>
           <g transform="translate(550, 368)">
