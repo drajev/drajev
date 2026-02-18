@@ -26,7 +26,7 @@
       
         @keyframes slide-right-1 {
           from { width: 0; }
-          to { width: 30.07px; }
+          to { width: 30.08px; }
         }
         .bar-1 {
           animation: slide-right-1 1s cubic-bezier(0.2, 0, 0.2, 1) 0.30000000000000004s forwards;
@@ -38,7 +38,7 @@
       
         @keyframes slide-right-2 {
           from { width: 0; }
-          to { width: 19.18px; }
+          to { width: 19.17px; }
         }
         .bar-2 {
           animation: slide-right-2 1s cubic-bezier(0.2, 0, 0.2, 1) 0.4s forwards;
@@ -240,7 +240,7 @@
           <!-- Row 1: Text Labels (Above Bar) -->
           <!-- Left: Language Name + Lines -->
           <text x="0" y="0" class="lang-name fade-2">HTML</text>
-          <text x="46" y="0" class="lang-lines fade-2">459 lines</text>
+          <text x="46" y="0" class="lang-lines fade-2">458 lines</text>
           
           <!-- Right: Percentage -->
           <text x="720" y="0" text-anchor="end" class="lang-percent fade-2">2.7%</text>
@@ -251,7 +251,7 @@
           
           <!-- Filled Bar -->
           <rect x="0" y="12" width="0" height="12" rx="6" fill="#e34c26" class="bar-2">
-             <title>HTML: 459 lines</title>
+             <title>HTML: 458 lines</title>
           </rect>
         </g>
         <g transform="translate(40, 236)">
