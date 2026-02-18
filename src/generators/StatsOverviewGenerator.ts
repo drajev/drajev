@@ -236,7 +236,6 @@ export class StatsOverviewGenerator extends SVGGenerator {
     const cellSize = Math.floor(
       (heatmapContentWidth + cellGap) / numWeeks - cellGap,
     );
-    const heatmapWidth = numWeeks * (cellSize + cellGap) - cellGap;
     const heatmapHeight = numDays * (cellSize + cellGap) - cellGap;
 
     const sectionTop = 135;
