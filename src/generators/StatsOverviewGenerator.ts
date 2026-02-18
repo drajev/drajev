@@ -257,7 +257,6 @@ export class StatsOverviewGenerator extends SVGGenerator {
         </defs>
         <g clip-path="url(#activity-clip)">
           <rect x="${cardX}" y="350" width="${cardW}" height="120" rx="8" class="card-bg" />
-          <text x="${startX}" y="${labelY}" class="heatmap-lbl">Recent Activity (12w)</text>
           <g>${heatmapSVG}</g>
           <g transform="translate(280, 368)">
             <text x="0" y="0" class="card-label">Average</text>
