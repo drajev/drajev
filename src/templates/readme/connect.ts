@@ -15,7 +15,7 @@ const socialLinks: SocialLink[] = [
   {
     name: 'X',
     url: 'https://x.com/alxndrazhev',
-    icon: 'https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/x.svg',
+    icon: 'https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white',
     height: 30,
   },
   {
@@ -43,7 +43,7 @@ export function generateConnect(): string {
   const links = socialLinks
     .map(
       link =>
-        `<a href="${link.url}" target="_blank"><img align="center" src="${link.icon}" alt="${link.name.toLowerCase()}" height="${link.height}" ${link.name === 'LinkedIn' || link.name === 'x' || link.name === 'YouTube' ? 'width="40"' : ''} /></a>`,
+        `<a href="${link.url}" target="_blank"><img align="center" src="${link.icon}" alt="${link.name.toLowerCase()}" height="${link.height}" ${link.name === 'LinkedIn' || link.name === 'X' || link.name === 'YouTube' ? 'width="40"' : ''} /></a>`,
     )
     .join(' ');
 

@@ -223,11 +223,15 @@ export class StatsOverviewGenerator extends SVGGenerator {
       weeks.push(last12Weeks.slice(i, i + 7));
     }
 
-    const cellSize = 11;
-    const cellGap = 3;
-    const labelBottom = 378;
+    // Compact layout so it doesn't overflow narrow containers (README, mobile)
+    const cellSize = 9;
+    const cellGap = 2;
+    const heatmapWidth = 12 * (cellSize + cellGap) - cellGap;
+    const cardX = 40;
+    const cardW = 480;
     const startX = 48;
-    const startY = labelBottom + 8;
+    const startY = 378;
+    const labelY = 368;
 
     let heatmapSVG = '';
     weeks.forEach((week, wI) => {
@@ -238,30 +242,29 @@ export class StatsOverviewGenerator extends SVGGenerator {
           day.level === 0
             ? '#21262d'
             : this.theme.contribution[
-            `level${day.level}` as keyof typeof this.theme.contribution
-            ];
+                `level${day.level}` as keyof typeof this.theme.contribution
+              ];
         heatmapSVG += `<rect x="${x}" y="${y}" width="${cellSize}" height="${cellSize}" rx="2" fill="${color}" stroke="${this.theme.border}" stroke-width="0.5" opacity="${day.level === 0 ? 0.6 : 0.95}" />`;
       });
     });
 
     return `
       <g class="slide-content" style="animation-delay: 0.6s">
-        <!-- Large Footer Card Background -->
-        <rect x="40" y="350" width="740" height="120" rx="8" class="card-bg" />
-
-        <!-- Heatmap Container -->
-        <g>
-          <text x="48" y="375" class="heatmap-lbl">Recent Activity (12 Weeks)</text>
-          ${heatmapSVG}
-        </g>
-
-        <!-- Mini Stats Right Side -->
-        <g transform="translate(550, 380)">
-           <text x="0" y="0" class="card-label">Average</text>
-           <text x="0" y="25" class="card-value">${this.#stats.avgCommitsPerDay} / day</text>
-
-           <text x="0" y="60" class="card-label">Contributed To</text>
-           <text x="0" y="85" class="card-value">${this.#stats.contributedTo} Repos</text>
+        <defs>
+          <clipPath id="activity-clip">
+            <rect x="${cardX}" y="350" width="${cardW}" height="120" rx="8" />
+          </clipPath>
+        </defs>
+        <g clip-path="url(#activity-clip)">
+          <rect x="${cardX}" y="350" width="${cardW}" height="120" rx="8" class="card-bg" />
+          <text x="${startX}" y="${labelY}" class="heatmap-lbl">Recent Activity (12w)</text>
+          <g>${heatmapSVG}</g>
+          <g transform="translate(280, 368)">
+            <text x="0" y="0" class="card-label">Average</text>
+            <text x="0" y="22" class="card-value">${this.#stats.avgCommitsPerDay} / day</text>
+            <text x="0" y="52" class="card-label">Contributed To</text>
+            <text x="0" y="74" class="card-value">${this.#stats.contributedTo} Repos</text>
+          </g>
         </g>
       </g>
     `;
