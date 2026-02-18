@@ -226,12 +226,10 @@ export class StatsOverviewGenerator extends SVGGenerator {
     // Compact layout so it doesn't overflow narrow containers (README, mobile)
     const cellSize = 9;
     const cellGap = 2;
-    const heatmapWidth = 12 * (cellSize + cellGap) - cellGap;
     const cardX = 40;
     const cardW = 480;
     const startX = 48;
     const startY = 378;
-    const labelY = 368;
 
     let heatmapSVG = '';
     weeks.forEach((week, wI) => {
