@@ -5,19 +5,9 @@ import { GitHubClient } from '../core/GitHubClient.js';
 const FALLBACK_LANGUAGE_COLORS: Record<string, string> = {
   TypeScript: '#3178c6',
   JavaScript: '#f1e05a',
-  Python: '#3572A5',
-  Go: '#00ADD8',
-  Java: '#b07219',
-  'C#': '#178600',
-  C: '#555555',
-  'C++': '#f34b7d',
-  Rust: '#dea584',
-  Ruby: '#701516',
-  PHP: '#4F5D95',
   HTML: '#e34c26',
   CSS: '#563d7c',
   Shell: '#89e051',
-  Dart: '#00B4AB',
   Solidity: '#AA6746',
 };
 

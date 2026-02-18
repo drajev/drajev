@@ -225,19 +225,22 @@ export class StatsOverviewGenerator extends SVGGenerator {
 
     const cellSize = 11;
     const cellGap = 3;
-    const startY = 365;
-    const startX = 40;
+    const labelBottom = 378;
+    const startX = 48;
+    const startY = labelBottom + 8;
 
     let heatmapSVG = '';
     weeks.forEach((week, wI) => {
       week.forEach((day, dI) => {
         const x = startX + wI * (cellSize + cellGap);
-        const y = startY + dI * (cellSize + cellGap) + 20;
+        const y = startY + dI * (cellSize + cellGap);
         const color =
-          this.theme.contribution[
+          day.level === 0
+            ? '#21262d'
+            : this.theme.contribution[
             `level${day.level}` as keyof typeof this.theme.contribution
-          ];
-        heatmapSVG += `<rect x="${x}" y="${y}" width="${cellSize}" height="${cellSize}" rx="2" fill="${color}" opacity="0.9" />`;
+            ];
+        heatmapSVG += `<rect x="${x}" y="${y}" width="${cellSize}" height="${cellSize}" rx="2" fill="${color}" stroke="${this.theme.border}" stroke-width="0.5" opacity="${day.level === 0 ? 0.6 : 0.95}" />`;
       });
     });
 
@@ -248,7 +251,7 @@ export class StatsOverviewGenerator extends SVGGenerator {
 
         <!-- Heatmap Container -->
         <g>
-          <text x="55" y="375" class="heatmap-lbl">Recent Activity (12 Weeks)</text>
+          <text x="48" y="375" class="heatmap-lbl">Recent Activity (12 Weeks)</text>
           ${heatmapSVG}
         </g>
 
