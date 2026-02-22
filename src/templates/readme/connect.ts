@@ -14,7 +14,7 @@ const socialLinks: SocialLink[] = [
   },
   {
     name: 'X',
-    url: 'https://x.com/alxndrazhev',
+    url: 'https://x.com/alxndrazh',
     icon: 'https://img.shields.io/badge/x-F7DF1E?style=for-the-badge&logo=x&logoColor=black',
     height: 30,
   },
