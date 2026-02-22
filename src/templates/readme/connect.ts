@@ -19,9 +19,8 @@ const socialLinks: SocialLink[] = [
     height: 30,
   },
   {
-    //TODO: Add portfolio URL
     name: 'Portfolio',
-    url: 'http://githubpages',
+    url: 'https://drajev.github.io/portfolio/',
     icon: 'https://img.shields.io/badge/Portfolio-255E63?style=for-the-badge&logo=react&logoColor=white',
     height: 30,
   },
