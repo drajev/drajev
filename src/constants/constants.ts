@@ -7,7 +7,7 @@
  */
 export const DATE_RANGES = {
   /** Number of days to look back for contributions */
-  CONTRIBUTION_DAYS: 2000,
+  CONTRIBUTION_DAYS: 365,
 } as const;
 
 /**
