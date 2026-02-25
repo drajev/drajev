@@ -140,50 +140,50 @@
       <g transform="translate(20, 0)">
         
       
-        <path d="M 240 103 L 240 85 A 85 85 0 0 1 311.62337882751706 124.227829357458 L 296.4560750758076 133.9207596111728 A 67 67 0 0 0 240 103 Z" fill="#fbbf24" stroke="#0d1117" stroke-width="2"
+        <path d="M 240 103 L 240 85 A 85 85 0 0 1 309.7804943849983 121.46462523699628 L 295.00344851523397 131.74270459857354 A 67 67 0 0 0 240 103 Z" fill="#fbbf24" stroke="#0d1117" stroke-width="2"
               class="slice-anim" style="animation-delay: 0s">
-          <title>Monday: 152</title>
+          <title>Monday: 145</title>
         </path>
       
-        <path d="M 296.4560750758076 133.9207596111728 L 311.62337882751706 124.227829357458 A 85 85 0 0 1 323.14448749033556 187.66335755085754 L 305.5374195512057 183.92288183420536 A 67 67 0 0 0 296.4560750758076 133.9207596111728 Z" fill="#34d399" stroke="#0d1117" stroke-width="2"
+        <path d="M 295.00344851523397 131.74270459857354 L 309.7804943849983 121.46462523699628 A 85 85 0 0 1 323.6867824436348 184.88363007574878 L 305.964875573218 181.7318025302961 A 67 67 0 0 0 295.00344851523397 131.74270459857354 Z" fill="#34d399" stroke="#0d1117" stroke-width="2"
               class="slice-anim" style="animation-delay: 0.05s">
           <title>Tuesday: 118</title>
         </path>
       
-        <path d="M 305.5374195512057 183.92288183420536 L 323.14448749033556 187.66335755085754 A 85 85 0 0 1 253.67041617076865 253.89350226160536 L 250.77550451107646 236.127819429736 A 67 67 0 0 0 305.5374195512057 183.92288183420536 Z" fill="#60a5fa" stroke="#0d1117" stroke-width="2"
+        <path d="M 305.964875573218 181.7318025302961 L 323.6867824436348 184.88363007574878 A 85 85 0 0 1 255.71662958705957 253.53434954809407 L 252.38840214509403 235.84472258496828 A 67 67 0 0 0 305.964875573218 181.7318025302961 Z" fill="#60a5fa" stroke="#0d1117" stroke-width="2"
               class="slice-anim" style="animation-delay: 0.1s">
           <title>Wednesday: 182</title>
         </path>
       
-        <path d="M 250.77550451107646 236.127819429736 L 253.67041617076865 253.89350226160536 A 85 85 0 0 1 160.0889234175795 198.96929131750596 L 177.01126904679796 192.83461786203412 A 67 67 0 0 0 250.77550451107646 236.127819429736 Z" fill="#818cf8" stroke="#0d1117" stroke-width="2"
+        <path d="M 252.38840214509403 235.84472258496828 L 255.71662958705957 253.53434954809407 A 85 85 0 0 1 160.50823016011142 200.10080609754797 L 177.34178142032312 193.726517747479 A 67 67 0 0 0 252.38840214509403 235.84472258496828 Z" fill="#818cf8" stroke="#0d1117" stroke-width="2"
               class="slice-anim" style="animation-delay: 0.15000000000000002s">
           <title>Thursday: 210</title>
         </path>
       
-        <path d="M 177.01126904679796 192.83461786203412 L 160.0889234175795 198.96929131750596 A 85 85 0 0 1 231.60754554875138 85.4153281718034 L 233.3847711972511 103.3273763236568 A 67 67 0 0 0 177.01126904679796 192.83461786203412 Z" fill="#a78bfa" stroke="#0d1117" stroke-width="2"
+        <path d="M 177.34178142032312 193.726517747479 L 160.50823016011142 200.10080609754797 A 85 85 0 0 1 231.5456497754151 85.42149231465442 L 233.3359827641507 103.33223511860996 A 67 67 0 0 0 177.34178142032312 193.726517747479 Z" fill="#a78bfa" stroke="#0d1117" stroke-width="2"
               class="slice-anim" style="animation-delay: 0.2s">
           <title>Friday: 276</title>
         </path>
       
-        <path d="M 233.3847711972511 103.3273763236568 L 231.60754554875138 85.4153281718034 A 85 85 0 0 1 235.51879826583968 85.11820671652984 L 236.46775863307363 103.09317470597058 A 67 67 0 0 0 233.3847711972511 103.3273763236568 Z" fill="#fb7185" stroke="#0d1117" stroke-width="2"
+        <path d="M 233.3359827641507 103.33223511860996 L 231.5456497754151 85.42149231465442 A 85 85 0 0 1 235.48567036486548 85.1199621351089 L 236.44164605230574 103.09455838885054 A 67 67 0 0 0 233.3359827641507 103.33223511860996 Z" fill="#fb7185" stroke="#0d1117" stroke-width="2"
               class="slice-anim" style="animation-delay: 0.25s">
           <title>Saturday: 7</title>
         </path>
       
-        <path d="M 236.46775863307363 103.09317470597058 L 235.51879826583968 85.11820671652984 A 85 85 0 0 1 239.99999999999997 85 L 240 103 A 67 67 0 0 0 236.46775863307363 103.09317470597058 Z" fill="#f472b6" stroke="#0d1117" stroke-width="2"
+        <path d="M 236.44164605230574 103.09455838885054 L 235.48567036486548 85.1199621351089 A 85 85 0 0 1 239.99999999999997 85 L 240 103 A 67 67 0 0 0 236.44164605230574 103.09455838885054 Z" fill="#f472b6" stroke="#0d1117" stroke-width="2"
               class="slice-anim" style="animation-delay: 0.30000000000000004s">
           <title>Sunday: 8</title>
         </path>
       
       
-      <text x="240" y="165" text-anchor="middle" class="chart-value">953</text>
+      <text x="240" y="165" text-anchor="middle" class="chart-value">946</text>
       <text x="240" y="185" text-anchor="middle" class="chart-sub">Contributions</text>
     
       
         <g transform="translate(30, 280)">
           <rect width="10" height="10" rx="3" fill="#fbbf24" />
           <text x="16" y="9" class="legend-key">Monday</text>
-          <text x="105" y="9" text-anchor="end" class="legend-val">16%</text>
+          <text x="105" y="9" text-anchor="end" class="legend-val">15%</text>
         </g>
       
         <g transform="translate(155, 280)">
@@ -244,12 +244,6 @@
       <circle cx="185" cy="210" r="55" fill="none" stroke="#30363d" stroke-width="1" opacity="0.2" />
       <circle cx="185" cy="210" r="135" fill="none" stroke="#30363d" stroke-width="1" opacity="0.1" stroke-dasharray="4 4"/>
     
-      
-        <line x1="200.5" y1="268.0" 
-              x2="218.6" y2="335.6" 
-              stroke="url(#grad-day)" stroke-width="5" stroke-linecap="round" 
-              class="bar-anim" style="animation-delay: 0.32999999999999996s">
-        </line>
       
       <text x="185" y="65" text-anchor="middle" class="chart-label">12 AM</text><text x="340" y="214" text-anchor="middle" class="chart-label">6 AM</text><text x="185" y="360" text-anchor="middle" class="chart-label">12 PM</text><text x="30" y="214" text-anchor="middle" class="chart-label">6 PM</text>
       
